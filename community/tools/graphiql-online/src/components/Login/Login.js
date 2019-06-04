@@ -37,7 +37,7 @@ class LoginComponent extends React.Component {
                   type="submit"
                   onClick={(e) => {
                     e.preventDefault();
-                    const urlRegex= /^(http[s]?:\/\/){0,1}(www\.){0,1}[a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,5}[\.]{0,1}/;
+                    const urlRegex= ^(http[s]?:\/\/){0,1}(www\.){0,1}([a-zA-Z0-9\.\-]+\.[a-zA-Z]{2,5}[\.]{0,1}|localhost);
                     if (!urlRegex.test(this.state.graphqlEndpoint)) {
                       alert('Please enter a valid URL');
                     } else {
